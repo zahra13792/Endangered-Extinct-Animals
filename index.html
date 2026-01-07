@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حیوانات در خطر انقراض</title>
+<style>
+  @font-face {
+    font-family: 'dana';
+    src: url(../dana-fonts/Dana-Medium.ttf);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; 
+  font-family: 'dana';
+  }
+
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e6e6e6;
+  }
+
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #00b4d8;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: #90e0ef;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero {
+    width: min(1000px, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+  }
+
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .box {
+    width: 280px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
+    border: 2px solid rgba(0, 180, 216, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .box:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0, 180, 216, 0.3);
+    border-color: rgba(0, 180, 216, 0.6);
+    background: linear-gradient(135deg, rgba(0, 180, 216, 0.9) 0%, rgba(15, 52, 96, 0.9) 100%);
+  }
+
+  .animal {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(0, 180, 216, 0.4);
+  }
+
+  .left-animal {
+    transform: rotate(-8deg);
+  }
+
+  .right-animal {
+    transform: rotate(8deg);
+  }
+
+  @media (max-width: 900px) {
+    .hero { 
+      flex-direction: column; 
+      gap: 40px; 
+    }
+    
+    .boxes { 
+      flex-direction: row;
+      gap: 20px;
+    }
+    
+    .box { 
+      width: 200px; 
+      height: 100px;
+      font-size: 22px;
+    }
+    
+    .animal { 
+      width: 150px; 
+      height: 150px; 
+    }
+    
+    h1 {
+      font-size: 36px;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero { 
+      gap: 30px; 
+    }
+    
+    .boxes { 
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .box { 
+      width: 250px; 
+      height: 90px;
+      font-size: 20px;
+    }
+    
+    .animal { 
+      width: 130px; 
+      height: 130px; 
+    }
+    
+    .left-animal, .right-animal {
+      transform: rotate(0);
+    }
+    
+    h1 {
+      font-size: 32px;
+    }
+    
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  body, h1, .subtitle, .box, .animal {
+    animation: fadeIn 0.8s ease-out;
+  }
+</style>
+</head>
+
+<body>
+
+    <h1>حیوانات</h1>
+<h2 class="subtitle">👇🏻با حیوانات عجیب آشنا شوید </h2>
+  <div class="hero">
+
+    <img class="animal left-animal"
+      src="image/Tiger-main.png">
+<div class="boxes">
+  <a href="drangraz.html" class="box">در حال انقراض</a>
+  <a href="angraz.html" class="box">منقرض شده</a>
+</div>
+ 
+    <img class="animal right-animal"
+      src="image/closeup-shot-of-a-giant-panda-bear.jpg">
+
+  </div>
+
+</body>
+</html>
